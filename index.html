@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <style>
+        .chat__header {
+            text-align: center;
+        }
+
+        .chat__item {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .chat__person-avatar {
+            border-radius: 50%;
+        }
+
+        .chat__messages {
+            margin-left: 10px;
+        }
+
+        .chat__message {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .chat__message-content {
+            border-radius: 5px;
+            padding: 7px;
+            background-color: #ccc;
+            display: inline-block;
+
+            margin-left: 5px;
+        }
+
+        .chat__item--responder {
+            flex-direction: row-reverse;
+        }
+
+        .chat__item--responder .chat__message {
+            flex-direction: row-reverse;
+        }
+
+        .chat__item--responder .chat__message-content {
+            margin-left: 0;
+            margin-right: 5px;
+        }
+        form
+        {
+            display: flex;
+            justify-content: center;
+        }
+        .log
+        {
+            margin-right: 10px;
+        }
+        .password
+        {
+            margin-left: 10px;
+        }
+        .but {
+            display: flex;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+<body>
+<div class="Authorization">
+    <form method="GET">
+        <div class="log">
+            <label for="login" class="form-label">Login</label>
+            <input name="login" placeholder="Login" type="text" id="login">
+        </div>
+        <div class="password">
+            <label for="password">Password</label>
+            <input name="password" placeholder="Password" type="password" id="password">
+        </div>
+    </form>
+    <div class="but">
+        <button type="submit" class="enterLog" id="enterLogin">Login</button>
+    </div>
+</div>
+<div class="chat">
+    <h1 class="chat__header">Chat</h1>
+
+    <div class="chat__content">
+        <div class="chat__item">
+            <img src="http://placekitten.com/40/50" alt="photo" class="chat__person-avatar">
+
+            <div class="chat__messages">
+                <div class="chat__message">
+                    <div class="chat__message-time">9:03</div>
+                    <div class="chat__message-content">Hi</div>
+                </div>
+
+                <div class="chat__message">
+                    <div class="chat__message-time">9:03</div>
+                    <div class="chat__message-content">How are you?</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="chat__item chat__item--responder">
+            <img src="http://placekitten.com/40/50" alt="photo" class="chat__person-avatar">
+
+            <div class="chat__messages">
+                <div class="chat__message">
+                    <div class="chat__message-time">9:05</div>
+                    <div class="chat__message-content">Hello</div>
+                </div>
+
+                <div class="chat__message">
+                    <div class="chat__message-time">9:07</div>
+                    <div class="chat__message-content">I'm fine. Let's have a dinner today.</div>
+                </div>
+
+                <div class="chat__message">
+                    <div class="chat__message-time">9:07</div>
+                    <div class="chat__message-content">What do you think about it?           </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
